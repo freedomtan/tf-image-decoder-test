@@ -7,4 +7,4 @@ test performance of some image decoders in Tensorflow
 
 [x86-ubuntu](x86-ubuntu): data gathere on an old x86 machine running Ubuntu 16.04
 
-[osx](osx): data gathered on an late 2014 iMac
+[osx](osx): data gathered on a late 2014 iMac
