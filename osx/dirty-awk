@@ -1,0 +1,1 @@
+grep avg= decoding-png.txt | awk '{print $12}' | awk -F= 'BEGIN {sum=0} {sum=sum+$2} END{print sum/20}

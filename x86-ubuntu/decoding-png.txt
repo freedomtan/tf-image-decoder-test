@@ -1,0 +1,587 @@
+Script started on Fri 05 May 2017 11:13:29 AM CST
+]0;freedom@cpt-xeon: ~/work/ml/data/x86-ubuntufreedom@cpt-xeon:~/work/ml/data/x86-ubuntu$ for a in 0 1 2 3 4 5 6 7 8 9; do taskset -c 3 python /tmp/image_decode_time.py /tmp/grace_hopper.png;done
+2017-05-05 11:13:37.054669: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:37.054793: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:37.054812: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:37.054825: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 35.418%	 35.418%	     0.000	_SOURCE
+2017-05-05 11:13:37.054840: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.287%	 72.705%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:37.054853: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 27.295%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:37.054866: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:37.054875: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:37.054885: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:37.054895: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.287%	 37.287%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:37.054907: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 35.418%	 72.705%	     0.000	_SOURCE
+2017-05-05 11:13:37.054919: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 27.295%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:37.054931: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:37.054939: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:37.054948: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:37.054960: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 27.295%	 27.295%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:37.054972: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.287%	 64.582%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:37.054986: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 35.418%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:37.054998: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:37.055007: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:37.055016: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:37.055027: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:37.055039: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:37.055049: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:37.055058: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:37.055068: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=29 curr=14 min=10 max=29 avg=12.31 std=1
+2017-05-05 11:13:37.055078: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:37.055088: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:37.055097: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:40.248183: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:40.248292: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:40.248309: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:40.248320: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.112%	 34.112%	     0.000	_SOURCE
+2017-05-05 11:13:40.248330: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.526%	 70.639%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:40.248340: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.361%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:40.248351: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:40.248373: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:40.248384: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:40.248412: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.526%	 36.526%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:40.248440: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.112%	 70.639%	     0.000	_SOURCE
+2017-05-05 11:13:40.248454: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.361%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:40.248464: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:40.248473: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:40.248482: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:40.248508: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.361%	 29.361%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:40.248522: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.526%	 65.888%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:40.248535: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.112%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:40.248546: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:40.248555: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:40.248565: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:40.248577: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:40.248589: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:40.248602: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:40.248614: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:40.248623: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=27 curr=13 min=10 max=27 avg=12.84 std=1
+2017-05-05 11:13:40.248633: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:40.248643: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:40.248652: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:43.510723: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:43.510837: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:43.510859: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:43.510870: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.004	 33.411%	 33.411%	     0.000	_SOURCE
+2017-05-05 11:13:43.510897: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.063%	 70.474%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:43.510911: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.526%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:43.510923: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:43.510932: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:43.510941: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:43.510952: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.063%	 37.063%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:43.510965: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.004	 33.411%	 70.474%	     0.000	_SOURCE
+2017-05-05 11:13:43.510977: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.526%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:43.510990: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:43.510999: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:43.511009: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:43.511018: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.526%	 29.526%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:43.511030: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.063%	 66.589%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:43.511042: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.004	 33.411%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:43.511054: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:43.511063: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:43.511072: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:43.511083: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:43.511093: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:43.511104: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:43.511114: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:43.511123: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=33 curr=11 min=10 max=33 avg=12.87 std=2
+2017-05-05 11:13:43.511133: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:43.511142: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:43.511151: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:46.692499: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:46.692603: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:46.692619: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:46.692643: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 35.197%	 35.197%	     0.000	_SOURCE
+2017-05-05 11:13:46.692654: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.850%	 72.047%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:46.692668: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 27.953%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:46.692680: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:46.692689: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:46.692700: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:46.692712: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.850%	 36.850%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:46.692733: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 35.197%	 72.047%	     0.000	_SOURCE
+2017-05-05 11:13:46.692744: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 27.953%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:46.692756: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:46.692764: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:46.692775: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:46.692785: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 27.953%	 27.953%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:46.692797: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.850%	 64.803%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:46.692809: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 35.197%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:46.692819: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:46.692827: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:46.692837: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:46.692852: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:46.692863: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:46.692876: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:46.692885: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:46.692894: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=29 curr=11 min=10 max=29 avg=12.7 std=1
+2017-05-05 11:13:46.692904: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:46.692913: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:46.692923: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:49.910737: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:49.910854: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:49.910871: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:49.910882: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.686%	 34.686%	     0.000	_SOURCE
+2017-05-05 11:13:49.910892: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.834%	 71.519%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:49.910902: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.005	    0.004	 28.481%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:49.910930: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:49.910941: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:49.910950: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:49.910963: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.834%	 36.834%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:49.910976: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.686%	 71.519%	     0.000	_SOURCE
+2017-05-05 11:13:49.910988: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.005	    0.004	 28.481%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:49.910999: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:49.911011: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:49.911019: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:49.911029: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.005	    0.004	 28.481%	 28.481%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:49.911041: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.834%	 65.314%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:49.911084: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.686%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:49.911095: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:49.911104: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:49.911114: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:49.911125: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:49.911136: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:49.911147: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:49.911169: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:49.911178: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=31 curr=13 min=10 max=31 avg=12.57 std=2
+2017-05-05 11:13:49.911188: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:49.911197: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:49.911205: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:53.165533: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:53.165651: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:53.165668: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:53.165681: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.763%	 34.763%	     0.000	_SOURCE
+2017-05-05 11:13:53.165706: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 36.095%	 70.858%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:53.165719: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.142%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:53.165731: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:53.165740: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:53.165750: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:53.165761: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 36.095%	 36.095%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:53.165773: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.763%	 70.858%	     0.000	_SOURCE
+2017-05-05 11:13:53.165785: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.142%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:53.165798: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:53.165808: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:53.165818: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:53.165830: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.142%	 29.142%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:53.165844: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 36.095%	 65.237%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:53.165856: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.763%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:53.165868: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:53.165879: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:53.165890: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:53.165902: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:53.165914: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:53.165926: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:53.165937: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:53.165946: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=33 curr=13 min=11 max=33 avg=13.52 std=2
+2017-05-05 11:13:53.165957: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:53.165967: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:53.165976: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:56.330568: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:56.330672: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:56.330696: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:56.330709: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.576%	 34.576%	     0.000	_SOURCE
+2017-05-05 11:13:56.330728: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.796%	 71.372%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:56.330740: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.628%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:56.330751: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:56.330805: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:56.330816: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:56.330832: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.796%	 36.796%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:56.330843: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.576%	 71.372%	     0.000	_SOURCE
+2017-05-05 11:13:56.330862: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.628%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:56.330889: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:56.330901: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:56.330909: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:56.330933: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.628%	 28.628%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:56.330945: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.796%	 65.424%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:56.330956: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.576%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:56.330967: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:56.331016: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:56.331026: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:56.331037: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:13:56.331062: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:13:56.331073: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:13:56.331083: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:56.331092: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=28 curr=12 min=10 max=28 avg=12.61 std=2
+2017-05-05 11:13:56.331101: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:56.331122: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:56.331131: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:59.521922: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:13:59.522031: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:13:59.522058: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:59.522071: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 37.186%	 37.186%	     0.000	_SOURCE
+2017-05-05 11:13:59.522100: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.010	    0.005	 39.280%	 76.466%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:59.522113: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 23.534%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:59.522125: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:59.522135: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:13:59.522145: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:59.522169: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.010	    0.005	 39.280%	 39.280%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:59.522183: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 37.186%	 76.466%	     0.000	_SOURCE
+2017-05-05 11:13:59.522193: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 23.534%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:59.522204: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:59.522213: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:13:59.522223: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:13:59.522234: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.003	 23.534%	 23.534%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:13:59.522244: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.010	    0.005	 39.280%	 62.814%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:13:59.522254: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 37.186%	100.000%	     0.000	_SOURCE
+2017-05-05 11:13:59.522265: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:59.522272: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:13:59.522282: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:13:59.522293: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    40.000%	    40.000%	     0.000
+2017-05-05 11:13:59.522304: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    40.000%	    80.000%	     0.000
+2017-05-05 11:13:59.522315: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.002	    20.000%	   100.000%	     0.000
+2017-05-05 11:13:59.522325: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:13:59.522334: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=27 curr=12 min=10 max=27 avg=11.94 std=2
+2017-05-05 11:13:59.522343: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:13:59.522366: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:13:59.522375: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:02.796827: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:02.796929: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:02.796945: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:02.796970: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.819%	 34.819%	     0.000	_SOURCE
+2017-05-05 11:14:02.796981: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.048%	 71.868%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:02.796993: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.132%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:02.797008: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:02.797017: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:02.797027: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:02.797039: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.048%	 37.048%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:02.797050: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.819%	 71.868%	     0.000	_SOURCE
+2017-05-05 11:14:02.797060: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.132%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:02.797071: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:02.797079: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:02.797091: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:02.797103: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.132%	 28.132%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:02.797114: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.048%	 65.181%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:02.797125: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.016	    0.005	 34.819%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:02.797136: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:02.797145: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:02.797155: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:02.797168: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:02.797179: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:02.797190: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:02.797200: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:02.797209: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=33 curr=12 min=11 max=33 avg=13.01 std=2
+2017-05-05 11:14:02.797219: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:02.797228: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:02.797237: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:05.971456: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:05.971563: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:05.971579: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:05.971590: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 33.153%	 33.153%	     0.000	_SOURCE
+2017-05-05 11:14:05.971600: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.326%	 70.479%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:05.971610: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.521%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:05.971637: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:05.971647: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:05.971657: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:05.971669: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.326%	 37.326%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:05.971681: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 33.153%	 70.479%	     0.000	_SOURCE
+2017-05-05 11:14:05.971692: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.521%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:05.971704: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:05.971713: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:05.971721: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:05.971735: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.521%	 29.521%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:05.971748: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 37.326%	 66.847%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:05.971761: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 33.153%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:05.971773: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:05.971782: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:05.971793: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:05.971805: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:05.971817: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:05.971828: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:05.971839: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:05.971847: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=30 curr=13 min=10 max=30 avg=12.94 std=2
+2017-05-05 11:14:05.971858: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:05.971867: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:05.971876: I tensorflow/core/util/stat_summarizer.cc:407] 
+]0;freedom@cpt-xeon: ~/work/ml/data/x86-ubuntufreedom@cpt-xeon:~/work/ml/data/x86-ubuntu$ for a in 0 1 2 3 4 5 6 7 8 9; do taskset -c 3 python /tmp/image_decode_time.py /tmp/grace_hopper.png;done
+2017-05-05 11:14:12.577736: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:12.577849: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:12.577865: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:12.577876: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 33.881%	 33.881%	     0.000	_SOURCE
+2017-05-05 11:14:12.577890: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.011	    0.005	 36.776%	 70.657%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:12.577917: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.343%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:12.577928: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:12.577938: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:12.577947: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:12.577959: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.011	    0.005	 36.776%	 36.776%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:12.577970: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 33.881%	 70.657%	     0.000	_SOURCE
+2017-05-05 11:14:12.577983: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.343%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:12.577996: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:12.578005: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:12.578014: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:12.578025: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 29.343%	 29.343%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:12.578037: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.011	    0.005	 36.776%	 66.119%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:12.578048: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 33.881%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:12.578059: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:12.578067: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:12.578077: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:12.578088: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:12.578099: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:12.578109: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:12.578120: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:12.578129: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=29 curr=13 min=10 max=29 avg=12.78 std=2
+2017-05-05 11:14:12.578139: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:12.578148: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:12.578157: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:15.790852: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:15.790965: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:15.790981: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:15.790993: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.630%	 34.630%	     0.000	_SOURCE
+2017-05-05 11:14:15.791003: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.354%	 71.984%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:15.791015: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.016%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:15.791039: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:15.791047: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:15.791057: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:15.791067: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.354%	 37.354%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:15.791078: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.630%	 71.984%	     0.000	_SOURCE
+2017-05-05 11:14:15.791088: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.016%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:15.791098: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:15.791110: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:15.791119: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:15.791129: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.016%	 28.016%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:15.791140: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 37.354%	 65.370%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:15.791155: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.630%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:15.791166: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:15.791174: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:15.791184: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:15.791195: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:15.791206: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:15.791216: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:15.791226: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:15.791235: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=32 curr=13 min=10 max=32 avg=12.85 std=2
+2017-05-05 11:14:15.791245: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:15.791255: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:15.791263: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:18.992318: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:18.992443: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:18.992459: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:18.992471: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.864%	 35.864%	     0.000	_SOURCE
+2017-05-05 11:14:18.992482: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 37.561%	 73.425%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:18.992494: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.003	 26.575%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:18.992517: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:18.992526: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:18.992538: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:18.992550: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 37.561%	 37.561%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:18.992561: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.864%	 73.425%	     0.000	_SOURCE
+2017-05-05 11:14:18.992572: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.003	 26.575%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:18.992583: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:18.992592: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:18.992602: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:18.992612: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.003	 26.575%	 26.575%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:18.992623: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.013	    0.005	 37.561%	 64.136%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:18.992635: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.864%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:18.992646: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:18.992656: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:18.992664: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:18.992675: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:18.992689: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:18.992700: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:18.992711: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:18.992719: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=33 curr=12 min=10 max=33 avg=12.38 std=2
+2017-05-05 11:14:18.992730: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:18.992739: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:18.992748: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:22.223917: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:22.224032: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:22.224049: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:22.224060: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.385%	 34.385%	     0.000	_SOURCE
+2017-05-05 11:14:22.224070: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.909%	 71.293%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:22.224081: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.707%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:22.224107: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:22.224120: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:22.224129: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:22.224139: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.909%	 36.909%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:22.224151: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.385%	 71.293%	     0.000	_SOURCE
+2017-05-05 11:14:22.224163: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.707%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:22.224175: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:22.224185: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:22.224195: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:22.224210: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 28.707%	 28.707%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:22.224223: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.012	    0.005	 36.909%	 65.615%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:22.224235: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.385%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:22.224249: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:22.224259: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:22.224269: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:22.224280: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:22.224291: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:22.224302: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:22.224312: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:22.224321: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=30 curr=13 min=11 max=30 avg=12.68 std=2
+2017-05-05 11:14:22.224331: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:22.224341: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:22.224350: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:25.410701: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:25.410809: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:25.410825: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:25.410836: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.221%	 34.221%	     0.000	_SOURCE
+2017-05-05 11:14:25.410860: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 37.207%	 71.429%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:25.410872: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.571%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:25.410882: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:25.410892: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:25.410900: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:25.410925: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 37.207%	 37.207%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:25.410937: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.221%	 71.429%	     0.000	_SOURCE
+2017-05-05 11:14:25.410948: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.571%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:25.410958: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:25.410966: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:25.410988: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:25.411004: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.571%	 28.571%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:25.411016: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 37.207%	 65.779%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:25.411026: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.013	    0.004	 34.221%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:25.411038: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:25.411045: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:25.411055: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:25.411066: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:25.411076: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:25.411092: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:25.411103: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:25.411112: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=27 curr=12 min=10 max=27 avg=12.39 std=1
+2017-05-05 11:14:25.411121: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:25.411130: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:25.411139: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:28.565580: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:28.565708: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:28.565735: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:28.565746: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.020	    0.005	 35.312%	 35.312%	     0.000	_SOURCE
+2017-05-05 11:14:28.565756: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.016	    0.005	 36.589%	 71.901%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:28.565766: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 28.099%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:28.565775: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:28.565794: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:28.565803: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:28.565812: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.016	    0.005	 36.589%	 36.589%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:28.565823: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.020	    0.005	 35.312%	 71.901%	     0.000	_SOURCE
+2017-05-05 11:14:28.565834: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 28.099%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:28.565861: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:28.565871: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:28.565881: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:28.565896: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 28.099%	 28.099%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:28.565910: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.016	    0.005	 36.589%	 64.688%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:28.565921: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.020	    0.005	 35.312%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:28.565931: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:28.565939: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:28.565949: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:28.565960: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:28.565971: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:28.565981: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:28.565992: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:28.566000: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=43 curr=13 min=11 max=43 avg=13.31 std=3
+2017-05-05 11:14:28.566009: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:28.566017: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:28.566028: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:31.744220: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:31.744329: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:31.744346: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:31.744360: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.267%	 34.267%	     0.000	_SOURCE
+2017-05-05 11:14:31.744373: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.012	    0.005	 37.470%	 71.737%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:31.744384: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.263%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:31.744408: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:31.744419: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:31.744429: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:31.744440: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.012	    0.005	 37.470%	 37.470%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:31.744451: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.267%	 71.737%	     0.000	_SOURCE
+2017-05-05 11:14:31.744465: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.263%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:31.744476: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:31.744497: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:31.744505: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:31.744516: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.013	    0.004	    0.004	 28.263%	 28.263%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:31.744527: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.012	    0.005	 37.470%	 65.733%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:31.744538: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 34.267%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:31.744548: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:31.744556: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:31.744564: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:31.744575: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:31.744587: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:31.744598: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:31.744608: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:31.744616: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=31 curr=13 min=10 max=31 avg=12.49 std=2
+2017-05-05 11:14:31.744629: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:31.744639: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:31.744646: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:35.011752: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:35.011862: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:35.011879: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:35.011889: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.008%	 35.008%	     0.000	_SOURCE
+2017-05-05 11:14:35.011899: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.342%	 71.350%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:35.011910: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.650%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:35.011937: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:35.011947: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:35.011960: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:35.011976: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.342%	 36.342%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:35.011987: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.008%	 71.350%	     0.000	_SOURCE
+2017-05-05 11:14:35.011998: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.650%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:35.012008: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:35.012017: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:35.012026: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:35.012038: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.005	    0.004	 28.650%	 28.650%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:35.012050: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.011	    0.005	 36.342%	 64.992%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:35.012065: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.015	    0.004	 35.008%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:35.012077: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:35.012085: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:35.012095: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:35.012105: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:35.012115: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:35.012126: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:35.012139: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:35.012149: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=31 curr=12 min=10 max=31 avg=12.74 std=2
+2017-05-05 11:14:35.012158: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:35.012168: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:35.012176: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:38.201136: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:38.201244: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:38.201260: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:38.201271: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.119%	 34.119%	     0.000	_SOURCE
+2017-05-05 11:14:38.201295: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.242%	 70.362%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:38.201310: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.638%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:38.201320: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:38.201331: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:38.201341: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:38.201355: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.242%	 36.242%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:38.201367: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.119%	 70.362%	     0.000	_SOURCE
+2017-05-05 11:14:38.201391: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.638%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:38.201402: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:38.201411: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:38.201420: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:38.201433: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.004	    0.004	 29.638%	 29.638%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:38.201457: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.007	    0.010	    0.005	 36.242%	 65.881%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:38.201469: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.014	    0.004	 34.119%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:38.201481: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:38.201490: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:38.201499: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:38.201510: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:38.201522: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:38.201533: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:38.201543: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:38.201564: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=28 curr=12 min=11 max=28 avg=12.72 std=1
+2017-05-05 11:14:38.201574: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:38.201584: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:38.201592: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:41.440948: I tensorflow/core/util/stat_summarizer.cc:301] Number of nodes executed: 3
+2017-05-05 11:14:41.441087: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Run Order ==============================
+2017-05-05 11:14:41.441115: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:41.441130: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.021	    0.005	 34.490%	 34.490%	     0.000	_SOURCE
+2017-05-05 11:14:41.441140: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.014	    0.005	 36.337%	 70.827%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:41.441152: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 29.173%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:41.441163: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:41.441173: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Computation Time ==============================
+2017-05-05 11:14:41.441183: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:41.441194: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.014	    0.005	 36.337%	 36.337%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:41.441208: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.021	    0.005	 34.490%	 70.827%	     0.000	_SOURCE
+2017-05-05 11:14:41.441219: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 29.173%	100.000%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:41.441232: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:41.441241: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Top by Memory Use ==============================
+2017-05-05 11:14:41.441251: I tensorflow/core/util/stat_summarizer.cc:407] 	             [node type]	  [start]	  [first]	 [avg ms]	     [%]	  [cdf%]	  [mem KB]	[Name]
+2017-05-05 11:14:41.441262: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	    0.014	    0.007	    0.004	 29.173%	 29.173%	     0.000	_retval_png_reader_0_0
+2017-05-05 11:14:41.441276: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	    0.008	    0.014	    0.005	 36.337%	 65.510%	     0.000	png_reader/_0__cf__0
+2017-05-05 11:14:41.441290: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	    0.000	    0.021	    0.005	 34.490%	100.000%	     0.000	_SOURCE
+2017-05-05 11:14:41.441300: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:41.441308: I tensorflow/core/util/stat_summarizer.cc:407] ============================== Summary by node type ==============================
+2017-05-05 11:14:41.441317: I tensorflow/core/util/stat_summarizer.cc:407] 	             [Node type]	  [count]	  [avg ms]	    [avg %]	    [cdf %]	  [mem KB]
+2017-05-05 11:14:41.441329: I tensorflow/core/util/stat_summarizer.cc:407] 	                    NoOp	        1	     0.004	    36.364%	    36.364%	     0.000
+2017-05-05 11:14:41.441340: I tensorflow/core/util/stat_summarizer.cc:407] 	                   Const	        1	     0.004	    36.364%	    72.727%	     0.000
+2017-05-05 11:14:41.441350: I tensorflow/core/util/stat_summarizer.cc:407] 	                 _Retval	        1	     0.003	    27.273%	   100.000%	     0.000
+2017-05-05 11:14:41.441362: I tensorflow/core/util/stat_summarizer.cc:407] 
+2017-05-05 11:14:41.441371: I tensorflow/core/util/stat_summarizer.cc:407] Timings (microseconds): count=100 first=42 curr=13 min=11 max=42 avg=13.54 std=3
+2017-05-05 11:14:41.441380: I tensorflow/core/util/stat_summarizer.cc:407] Memory (bytes): count=100 curr=0(all same)
+2017-05-05 11:14:41.441389: I tensorflow/core/util/stat_summarizer.cc:407] 3 nodes observed
+2017-05-05 11:14:41.441398: I tensorflow/core/util/stat_summarizer.cc:407] 
+]0;freedom@cpt-xeon: ~/work/ml/data/x86-ubuntufreedom@cpt-xeon:~/work/ml/data/x86-ubuntu$ exit
+exit
+
+Script done on Fri 05 May 2017 11:16:23 AM CST
